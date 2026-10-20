@@ -1,16 +1,17 @@
-# Java / Maven
-backend/target/
-*.class
-*.log
+# Backend
+Backend/support-orders-api/target/
+Backend/support-orders-api/data/
+*.mv.db
+*.trace.db
 
-# Angular / Node
-frontend/node_modules/
-frontend/dist/
-frontend/.angular/
+# Frontend
+Frontend/frontend/node_modules/
+Frontend/frontend/dist/
+Frontend/frontend/.angular/
 
 # IDE
-.idea/
 .vscode/
+.idea/
 *.iml
 .classpath
 .project
@@ -19,11 +20,3 @@ frontend/.angular/
 # OS
 .DS_Store
 Thumbs.db
-
-# Environment
-.env
-*.env
-
-# H2 local files
-*.mv.db
-*.trace.db
