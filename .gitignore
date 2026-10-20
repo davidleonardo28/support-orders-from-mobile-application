@@ -1,0 +1,29 @@
+# Java / Maven
+backend/target/
+*.class
+*.log
+
+# Angular / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.env
+
+# H2 local files
+*.mv.db
+*.trace.db
