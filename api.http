@@ -1,0 +1,58 @@
+### Crear orden
+POST http://localhost:8080/api/support-orders
+Content-Type: application/json
+
+{
+  "externalReference": "MOB-1001",
+  "customerId": "CUST-001",
+  "category": "PAYMENT",
+  "description": "El pago aparece como pendiente después de varios minutos.",
+  "channel": "MOBILE_APP",
+  "priority": "MEDIUM"
+}
+
+### Listar todas las órdenes
+GET http://localhost:8080/api/support-orders
+
+### Filtrar por estado
+GET http://localhost:8080/api/support-orders?status=OPEN
+
+### Consultar orden por ID
+GET http://localhost:8080/api/support-orders/1
+
+### Cambiar OPEN -> IN_PROGRESS
+PATCH http://localhost:8080/api/support-orders/1/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
+
+### Cambiar IN_PROGRESS -> RESOLVED
+PATCH http://localhost:8080/api/support-orders/1/status
+Content-Type: application/json
+
+{
+  "status": "RESOLVED"
+}
+
+### Ejemplo de transición inválida
+PATCH http://localhost:8080/api/support-orders/1/status
+Content-Type: application/json
+
+{
+  "status": "OPEN"
+}
+
+### Ejemplo de creación inválida
+POST http://localhost:8080/api/support-orders
+Content-Type: application/json
+
+{
+  "externalReference": "",
+  "customerId": "CUST-001",
+  "category": "PAYMENT",
+  "description": "corta",
+  "channel": "MOBILE_APP",
+  "priority": "MEDIUM"
+}

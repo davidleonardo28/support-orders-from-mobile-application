@@ -1,0 +1,75 @@
+INSTRUCCIONES DE EJECUCIÓN
+
+BACKEND
+
+1. Ir a la carpeta:
+Backend/support-orders-api
+
+2. Ejecutar:
+mvnw.cmd spring-boot:run o ejecutar spring boot
+
+3. La API queda disponible en:
+http://localhost:8080
+
+
+FRONTEND
+
+1. Ir a la carpeta:
+Frontend/frontend
+
+2. Instalar dependencias:
+npm install
+
+3. Ejecutar:
+npm start
+
+4. Abrir:
+http://localhost:4200
+
+
+PRUEBAS BACKEND
+
+Desde:
+Backend/support-orders-api
+
+Ejecutar:
+mvnw.cmd test
+
+Resultado esperado:
+Tests run: 5
+Failures: 0
+Errors: 0
+
+
+COMPILAR FRONTEND
+
+Desde:
+Frontend/frontend
+
+Ejecutar:
+npm run build
+
+
+BASE DE DATOS
+
+Se utiliza H2.
+
+JDBC URL:
+jdbc:h2:file:./data/supportorders
+
+Usuario:
+sa
+
+Password:
+vacío
+
+Consola H2:
+http://localhost:8080/h2-console
+
+
+NOTAS
+
+- El backend debe estar levantado antes de usar el frontend.
+- El frontend consume la API en http://localhost:8080/api/support-orders
+- Los archivos locales de H2 no se incluyen en el repositorio.
+- Los ejemplos de consumo de la API están en el archivo api.http.
